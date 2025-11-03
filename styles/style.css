@@ -72,7 +72,19 @@ nav ul li a:hover {
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.birth-date {
+    font-size: 1.1rem !important;
+    color: var(--dark-color);
+    opacity: 0.9;
+    margin-bottom: 2rem !important;
+}
+
+.birth-date i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
 }
 
 .hero-image img {
@@ -104,6 +116,85 @@ nav ul li a:hover {
 .btn:hover {
     background: var(--dark-color);
     transform: translateY(-3px);
+}
+
+/* Section Études */
+.etudes {
+    padding: 5rem 10%;
+    background: white;
+}
+
+.etudes h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.etudes-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.etude-item {
+    background: var(--light-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.etude-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.etude-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.etude-header h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.etude-periode {
+    font-weight: 600;
+    color: var(--dark-color);
+    padding: 0.3rem 0.8rem;
+    background: white;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+.etude-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.etude-specialite {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.etude-details {
+    color: #666;
+    margin: 0;
+}
+
+.etude-lieu {
+    font-style: italic;
+    color: #555;
+    margin: 0;
 }
 
 /* Section Projets */
@@ -384,6 +475,150 @@ nav ul li a:hover {
     transition: var(--transition);
 }
 
+/* Section Langues */
+.langues {
+    padding: 4rem 10%;
+    background: var(--light-color);
+}
+
+.langues h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.langues-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.langue-item {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.langue-item:hover {
+    transform: translateY(-3px);
+}
+
+.langue-nom {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.langue-nom i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.langue-nom h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.langue-niveau {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+.langue-certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.certification {
+    display: inline-block;
+    background: var(--light-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Section Loisirs */
+.loisirs {
+    padding: 4rem 10%;
+    background: white;
+}
+
+.loisirs h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.loisirs-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.loisir-categorie {
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.loisir-categorie:hover {
+    transform: translateY(-5px);
+}
+
+.loisir-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.loisir-header i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.loisir-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+}
+
+.loisir-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.loisir-tag {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    color: var(--dark-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.loisir-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
 /* Section Contact */
 .contact {
     padding: 5rem 10%;
@@ -394,6 +629,35 @@ nav ul li a:hover {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    transition: var(--transition);
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    color: var(--primary-color);
 }
 
 .contact form {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Ivann PUSLECKI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -12,8 +13,9 @@
     <nav>
         <ul>
             <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#projets">Projets</a></li>
+            <li><a href="#etudes">Études</a></li>
             <li><a href="#experiences">Expériences</a></li>
+            <li><a href="#projets">Projets</a></li>
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -24,10 +26,40 @@
         <div class="hero-content">
             <h1>Bonjour, je suis <span>Ivann PUSLECKI</span></h1>
             <p>Ingénieur Embarqué, Data & Intelligence Articifielle</p>
+            <p class="birth-date"><i class="fas fa-birthday-cake"></i> 15 Juin 2002</p>
             <a href="#projets" class="btn">Voir mes projets</a>
         </div>
         <div class="hero-image">
             <img src="assets/photo_redim_pp.jpg" alt="Photo de profil">
+        </div>
+    </section>
+
+    <!-- Section Études et Diplômes -->
+    <section id="etudes" class="etudes">
+        <h2>Études et Diplômes</h2>
+        <div class="etudes-list">
+            <article class="etude-item">
+                <div class="etude-header">
+                    <h3>Diplôme d'Ingénieur Polytech Paris-Saclay</h3>
+                    <span class="etude-periode">2020 - 2025</span>
+                </div>
+                <div class="etude-content">
+                    <p class="etude-specialite">Spécialisation en électronique et systèmes robotisés</p>
+                    <p class="etude-details">Formation complète incluant 2 ans de prépa intégrée dans la même école.</p>
+                </div>
+            </article>
+
+            <article class="etude-item">
+                <div class="etude-header">
+                    <h3>Baccalauréat Scientifique</h3>
+                    <span class="etude-periode">2020</span>
+                </div>
+                <div class="etude-content">
+                    <p class="etude-specialite">Filière scientifique, spécialité SVT</p>
+                    <p class="etude-details">Mention Très Bien</p>
+                    <p class="etude-lieu">Lycée Jean-Michel de Lons-le-Saunier (39)</p>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -300,9 +332,98 @@
         </div>
     </section>
 
+    <!-- Section Langues -->
+    <section id="langues" class="langues">
+        <h2>Langues</h2>
+        <div class="langues-container">
+            <div class="langue-item">
+                <div class="langue-nom">
+                    <i class="fi fi-fr"></i>
+                    <h3>Français</h3>
+                </div>
+                <p class="langue-niveau">Langue maternelle</p>
+            </div>
+            <div class="langue-item">
+                <div class="langue-nom">
+                    <i class="fi fi-gb"></i>
+                    <h3>Anglais</h3>
+                </div>
+                <div class="langue-certifications">
+                    <span class="certification">TOEIC : 890</span>
+                    <span class="certification">TOEFL : 82</span>
+                </div>
+            </div>
+            <div class="langue-item">
+                <div class="langue-nom">
+                    <i class="fi fi-pl"></i>
+                    <h3>Polonais</h3>
+                </div>
+                <p class="langue-niveau">Débutant</p>
+            </div>
+            <div class="langue-item">
+                <div class="langue-nom">
+                    <i class="fi fi-de"></i>
+                    <h3>Allemand</h3>
+                </div>
+                <p class="langue-niveau">Débutant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Loisirs -->
+    <section id="loisirs" class="loisirs">
+        <h2>Loisirs & Intérêts</h2>
+        <div class="loisirs-container">
+            <div class="loisir-categorie">
+                <div class="loisir-header">
+                    <i class="fas fa-running"></i>
+                    <h3>Sports</h3>
+                </div>
+                <div class="loisir-items">
+                    <span class="loisir-tag">Tennis</span>
+                    <span class="loisir-tag">Ski</span>
+                    <span class="loisir-tag">F1</span>
+                </div>
+            </div>
+
+            <div class="loisir-categorie">
+                <div class="loisir-header">
+                    <i class="fas fa-music"></i>
+                    <h3>Musique</h3>
+                </div>
+                <div class="loisir-items">
+                    <span class="loisir-tag">Chant</span>
+                    <span class="loisir-tag">Piano</span>
+                    <span class="loisir-tag">Guitare</span>
+                    <span class="loisir-tag">Batterie</span>
+                </div>
+            </div>
+
+            <div class="loisir-categorie">
+                <div class="loisir-header">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Jeux Vidéos</h3>
+                </div>
+                <div class="loisir-items">
+                    <span class="loisir-tag">Gaming</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section Contact -->
     <section id="contact" class="contact">
         <h2>Contactez-moi</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>07 85 40 73 07</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>ivann.profree@gmail.com</span>
+            </div>
+        </div>
         <form>
             <input type="text" placeholder="Votre nom">
             <input type="email" placeholder="Votre email">
