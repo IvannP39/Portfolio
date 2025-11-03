@@ -37,18 +37,61 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 nav ul li a {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
     text-decoration: none;
     color: var(--dark-color);
     font-weight: 600;
     transition: var(--transition);
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
     color: var(--primary-color);
+}
+
+/* Styles responsifs pour la navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0.5rem 0;
+    }
+    
+    nav ul {
+        padding: 0.5rem;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    nav ul li a {
+        margin: 0 0.25rem;
+        padding: 0.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    nav ul li {
+        flex: 0 1 auto;
+    }
+
+    nav ul li a {
+        margin: 0;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.85rem;
+    }
 }
 
 /* Section Hero */
@@ -88,14 +131,13 @@ nav ul li a:hover {
 }
 
 .hero-image img {
-  width: clamp(180px, 100vw, 360px); /* min 180px, ideal 28% viewport, max 360px */
-  height: auto;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid var(--primary-color);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .hero-image img:hover {
