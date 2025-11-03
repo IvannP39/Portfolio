@@ -99,6 +99,11 @@ nav ul li a:hover {
     padding: 8rem 10% 4rem;
     min-height: 100vh;
     background: linear-gradient(135deg, var(--light-color), var(--secondary-color));
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
 }
 
 .hero-content h1 {
@@ -127,6 +132,10 @@ nav ul li a:hover {
     margin-right: 0.5rem;
 }
 
+.hero-image {
+    flex-shrink: 0;
+}
+
 .hero-image img {
     width: 250px;
     height: 250px;
@@ -135,6 +144,54 @@ nav ul li a:hover {
     border: 5px solid var(--primary-color);
     box-shadow: var(--shadow);
     transition: var(--transition);
+}
+
+/* Styles responsifs pour la section hero */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 6rem 5% 3rem;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 1rem 2rem;
+        gap: 2.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .birth-date {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
 }
 
 .hero-image img:hover {

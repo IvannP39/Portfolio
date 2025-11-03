@@ -1,0 +1,186 @@
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 80px; /* leave room for the 'Now' dot above the rod */
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+    z-index: 1; /* keep the rod behind dots and cards */
+}
+
+.timeline-item {
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease;
+    z-index: 4; /* dots above the rod */
+}
+
+.timeline-item:hover::before {
+    background: var(--secondary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    z-index: 3; /* content above the rod so the rod doesn't show through */
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.timeline-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.timeline-location {
+    color: var(--dark-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+    color: var(--dark-color);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+/* Styles responsifs pour la timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item::before {
+        left: 30px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding: 15px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: 20px;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 40px);
+        margin-left: 40px !important;
+        padding: 15px;
+    }
+    
+    .timeline-title {
+        font-size: 1rem;
+    }
+    
+    .timeline-date, .timeline-location {
+        font-size: 0.8rem;
+    }
+}
+
+/* Special styling for the "Now" timeline item */
+.timeline-item.timeline-now::before {
+    width: 28px;
+    height: 28px;
+    background: var(--secondary-color);
+    box-shadow: 0 0 14px rgba(108,92,231,0.35);
+    transform: translate(-50%, 0);
+}
+
+/* Position the Now dot so it sits above the rod (final point visible above the rod) */
+.timeline-item.timeline-now::before {
+    top: 40px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.timeline-item.timeline-now .timeline-content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    /* Use an opaque background so the central rod doesn't show through */
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.timeline-item.timeline-now .timeline-content {
+    margin-top: 12px; /* give space so the content sits just below the dot */
+}
+
+@media (max-width: 768px) {
+    .timeline-item.timeline-now .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        text-align: left;
+    }
+}
