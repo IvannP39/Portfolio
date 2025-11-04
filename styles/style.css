@@ -340,6 +340,20 @@ nav ul li a:hover {
     padding: 0 1rem 1rem;
 }
 
+.projet-card .demo-link {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.projet-card .demo-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
 /* Section Expériences */
 .experiences {
     padding: 5rem 10%;
@@ -841,6 +855,7 @@ footer {
 section {
     animation: fadeIn 1s ease-out forwards;
 }
+
 
 /* Styles pour les liens de contact */
 .contact-item a {

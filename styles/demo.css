@@ -1,0 +1,162 @@
+/* Variables et styles de base */
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --dark-color: #2d3436;
+    --light-color: #f5f6fa;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Container principal */
+.demo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--light-color);
+}
+
+/* Sections */
+.demo-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.demo-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Section héros avec la vidéo */
+.hero-section {
+    position: relative;
+    background: var(--gradient);
+    color: white;
+    overflow: hidden;
+}
+
+.hero-section h2 {
+    color: white;
+    margin-top: 2rem;
+}
+
+.hero-section .lead-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+}
+
+/* Titre et icônes */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 2rem 0 3rem;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2 i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+/* Cas d'utilisation */
+/* Style pour les étapes de fonctionnement */
+.demo-section .step-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.demo-section .step {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.demo-section .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.demo-section .step h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.demo-section .step ul {
+    margin: 1rem 0;
+}
+
+.demo-section .step li {
+    margin: 0.5rem 0;
+}
+
+/* Style original pour use-case */
+.use-case {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.example-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.demo-video {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.demo-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.back-link {
+    display: inline-block;
+    margin: 1rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
