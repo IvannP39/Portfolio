@@ -89,6 +89,21 @@ nav ul li a:hover {
         background: white;
         box-shadow: var(--shadow);
     }
+
+    .nav-demo {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-demo a {
+        display: block;
+        padding: 0.75rem;
+        font-size: 1rem;
+        margin: 0;
+        background: white;
+        box-shadow: var(--shadow);
+    }
 }
 
 /* Section Hero */
