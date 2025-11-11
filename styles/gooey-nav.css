@@ -1,0 +1,136 @@
+/* Gooey Nav styles */
+.gooey-nav-wrapper {
+    padding: 1rem 2rem;
+    background: transparent;
+    position: relative;
+}
+
+.gooey-nav {
+    filter: url(#goo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.gn-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem;
+    position: relative;
+    z-index: 2; /* above blob */
+}
+
+.gn-item {
+    position: relative;
+}
+
+.gn-link {
+    display: inline-block;
+    padding: 0.55rem 1rem;
+    color: var(--dark-color, #2d3436);
+    background: rgba(255,255,255,0.9);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s ease, color 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.gn-link:hover {
+    transform: translateY(-4px);
+    color: var(--primary-color, #6c5ce7);
+}
+
+/* The gooey blob that moves under the active item */
+.blob {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 44px;
+    background: linear-gradient(90deg, rgba(108,92,231,0.95), rgba(162,155,254,0.95));
+    border-radius: 30px;
+    transform: translate3d(0,0,0);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), width 300ms ease;
+    z-index: 1;
+    filter: blur(6px);
+}
+
+/* ensure the blob sits under links visually */
+.gooey-nav .gn-list {
+    z-index: 3;
+}
+
+/* Particles container */
+.gn-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: visible;
+}
+
+.gn-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(108,92,231,0.4);
+    opacity: 0;
+    transform: translate3d(0,0,0) scale(0.6);
+}
+
+/* active link style to contrast on the blob */
+.gn-link.active {
+    /* Keep active link text dark as requested */
+    color: var(--dark-color, #2d3436) !important;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color, #6c5ce7), var(--secondary-color, #a29bfe));
+    color: white;
+    box-shadow: 0 6px 18px rgba(108,92,231,0.25);
+    cursor: pointer;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    transition: transform 200ms ease, opacity 200ms ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.back-to-top i {
+    font-size: 1.1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+    .gn-list { gap: 0.5rem; }
+    .blob { width: 110px; height: 40px; }
+    .gn-link { padding: 0.45rem 0.8rem; font-size: 0.95rem; }
+}

@@ -8,19 +8,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/timeline.css">
+    <link rel="stylesheet" href="./styles/gooey-nav.css">
 </head>
 <body>
-    <!-- Barre de navigation -->
-    <nav>
-        <ul>
-            <li class="nav-home"><a href="#accueil">Accueil</a></li>
-            <li class="nav-other"><a href="#etudes">Études</a></li>
-            <li class="nav-other"><a href="#experiences">Expériences</a></li>
-            <li class="nav-other"><a href="#projets">Projets</a></li>
-            <li class="nav-other"><a href="#competences">Compétences</a></li>
-            <li class="nav-demo"><a href="pages/automation-demo.html">Démonstration</a></li>
-            <li class="nav-other"><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Barre de navigation (Gooey animated nav) -->
+    <nav class="gooey-nav-wrapper">
+        <!-- SVG filter used for gooey effect -->
+        <svg width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="gooey-nav" id="gooeyNav" aria-label="Navigation principale">
+            <div class="blob" id="gn-blob" aria-hidden="true"></div>
+            <ul class="gn-list">
+                <li class="gn-item"><a href="#accueil" class="gn-link" data-index="0">Accueil</a></li>
+                <li class="gn-item"><a href="#etudes" class="gn-link" data-index="1">Études</a></li>
+                <li class="gn-item"><a href="#experiences" class="gn-link" data-index="2">Expériences</a></li>
+                <li class="gn-item"><a href="#projets" class="gn-link" data-index="3">Projets</a></li>
+                <li class="gn-item"><a href="#competences" class="gn-link" data-index="4">Compétences</a></li>
+                <li class="gn-item"><a href="pages/automation-demo.html" class="gn-link" data-index="5">Démonstration</a></li>
+                <li class="gn-item"><a href="#contact" class="gn-link" data-index="6">Contact</a></li>
+            </ul>
+
+            <!-- particles layer -->
+            <div class="gn-particles" id="gn-particles" aria-hidden="true"></div>
+        </div>
     </nav>
 
     <!-- Section Accueil -->
@@ -188,6 +206,9 @@
                 </div>
         </div>
     </section>
+
+    <!-- include gooey nav script -->
+    <script src="./scripts/gooey-nav.js"></script>
 
     <!-- Section Compétences -->
     <section id="competences" class="competences">
@@ -430,5 +451,8 @@
             <a href="https://www.linkedin.com/in/ivann-puslecki-3b33aa323/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
+    
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
 </body>
 </html>
