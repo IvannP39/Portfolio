@@ -131,6 +131,7 @@ h2 i {
     border-radius: 8px;
     margin: 1rem 0;
 }
+
 .example-image {
     max-width: 100%;
     height: auto;
@@ -138,6 +139,7 @@ h2 i {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 .demo-video {
     width: 100%;
     max-width: 800px;
@@ -146,17 +148,27 @@ h2 i {
     border-radius: 8px;
     overflow: hidden;
 }
+
 .demo-video video {
     display: block;
     width: 100%;
     height: auto;
 }
+
 .back-link {
     display: inline-block;
     margin: 1rem 0;
     color: var(--primary-color);
     text-decoration: none;
 }
+
 .back-link:hover {
     text-decoration: underline;
+}
+
+/* Style spécifique pour le h2 de la section contact */
+.contact h2 {
+    display: block;
+    text-align: center;
+    justify-content: center;
 }

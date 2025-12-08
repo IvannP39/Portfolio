@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démonstration - Logiciel d'Automatisation de factures</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/demo.css">
+</head>
+
+<body>
+    <div class="demo-container">
+        <a href="../index.html" class="back-link">← Retour au portfolio</a>
+
+        <h1>Détail du logiciel d'automatisation de factures</h1>
+
+        <section class="demo-section hero-section">
+
+            <h2><i class="fas fa-robot"></i>Vue d'ensemble</h2>
+            <p class="lead-text">Un client ayant une application réalisant des livraisons m'a demandé de développer un
+                logiciel d'automatisation de ses factures.<br>
+                Il avait besoin de générer 2 types de factures automatiquement pour plus de 50 clients mais aussi pour
+                une vingtaine de livreurs.<br>
+                Ce qui correspond à plus de 120 factures à générer chaque mois, ce qui lui prenait 2 à 3 jours de
+                travail par mois.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <h2><i class="fas fa-cogs"></i>Fonctionnement</h2>
+            <div class="step-container">
+                <div class="step">
+                    <h3><i class="fas fa-database"></i>1. Entrée des données</h3>
+                    <p>Le logiciel récupère les données des milliers de transactions à partir de fichiers type
+                        ".csv" (ou Excel):</p>
+                    <ul>
+                        <li>Client</li>
+                        <li>Livreur</li>
+                        <li>Produit</li>
+                        <li>Quantité</li>
+                        <li>Conditions spéciales (promotions, volumes)</li>
+                        <li>Prix de vente / commission / frais de livraison etc...</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3><i class="fas fa-cog fa-spin"></i>2. Traitement des données</h3>
+                    <p>Nettoyage + traitement des données souhaitées :</p>
+                    <ul>
+                        <li>Calcul des prix finaux selon les commissions</li>
+                        <li>Calcul des frais de livraison</li>
+                        <li>Calcul des taxes...</li>
+                        <li>Génération des factures personnalisées</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3><i class="fas fa-check-circle"></i>3. Résultats</h3>
+                    <ul>
+                        <li>Les 3 types de factures générées automatiquement</li>
+                        <li>Rapport final dans un tableau Excel récapitulatif</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section concept-section">
+            <h2><i class="fas fa-lightbulb"></i>Le Résultat pour ce client</h2>
+            <p>Maintenant, ce client peut générer ses factures en quelques clics, sans avoir besoin de se soucier du
+                traitement des données, de faire les calculs à la main ou de générer chaque facture manuellement.</p>
+            <div class="use-case">
+                <h3>Il a maintenant à sa disposition :</h3>
+                <ul>
+                    <li>Une <strong>interface graphique</strong> simple et intuitive pour entrer les données et générer
+                        les factures</li>
+                    <li>Un gain de temps considérable chaque mois</li>
+                    <li>Une réduction des erreurs</li>
+                    <li>Une meilleure traçabilité</li>
+                </ul>
+            </div>
+            <p><i>*Pour des raisons de confidentialité, je ne peux pas montrer les données et PDF générés. Mais je
+                    serais ravi d'échanger avec vous et de vous montrer les résultats lors d'une rencontre en ligne ou
+                    en personne.</i></p>
+        </section>
+    </div>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2>Contactez-moi</h2>
+
+        <div class="contact-info">
+            <!--
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+33xxxxxxxxx" title="Cliquez pour m'appeler">xx xx xx xx xx</a>
+            </div>
+            -->
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ivann.profree@gmail.com"
+                    title="Cliquez pour m'envoyer un email">ivann.profree@gmail.com</a>
+            </div>
+        </div>
+
+        <form action="https://formsubmit.co/ded1109623862ce937133dd7ffff0170" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+            <input type="hidden" name="_next" value="https://ivannp39.github.io/Portfolio/thanks.html">
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2025 Portfolio Ivann PUSLECKI</p>
+        <div class="social-links">
+            <!--    <a href="https://github.com/IvannP39" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> -->
+            <a href="https://www.linkedin.com/in/ivann-puslecki-3b33aa323/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
