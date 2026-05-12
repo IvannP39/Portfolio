@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet SOBRIA - Green AI Benchmarking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/demo.css">
+    <style>
+        .tech-badge {
+            display: inline-block;
+            background: rgba(108, 92, 231, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+            font-weight: 500;
+            border: 1px solid rgba(108, 92, 231, 0.2);
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .metric-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .sobria-logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .sobria-logo-container img {
+            max-width: 250px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .code-block {
+            background: #2d3436;
+            color: #f5f6fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-container">
+        <a href="../index.html" class="back-link">← Retour au portfolio</a>
+
+        <div class="sobria-logo-container">
+            <img src="../assets/SOBRIA.png" alt="Logo SOBRIA">
+        </div>
+
+        <h1>SOBRIA — Green AI Benchmarking</h1>
+
+        <section class="demo-section hero-section">
+            <h2><i class="fas fa-leaf"></i>L'IA Responsable</h2>
+            <p class="lead-text">
+                <strong>SOBRIA</strong> (Sobriety-Oriented Benchmarking for Responsible AI) est un outil d'audit
+                d'entreprise (On-prem/Cloud) conçu pour mesurer l'empreinte environnementale et la performance des
+                modèles de langage (LLM).
+                Il permet de quantifier précisément ce que coûte une inférence en termes d'énergie, d'eau et de carbone.
+            </p>
+            <div class="tech-stack" style="margin-top: 1.5rem;">
+                <span class="tech-badge">Python 3.10+</span>
+                <span class="tech-badge">Docker & Compose</span>
+                <span class="tech-badge">CodeCarbon</span>
+                <span class="tech-badge">OpenCV / Data Viz</span>
+                <span class="tech-badge">Inférence API (OpenAI-compatible)</span>
+                <span class="tech-badge">Markdown/PDF Reporting</span>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2><i class="fas fa-chart-line"></i>Métriques Mesurées</h2>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Énergie</h3>
+                    <p>Consommation en kWh par requête (mesure réelle via capteurs matériels).</p>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Carbone</h3>
+                    <p>Estimation de l'empreinte CO₂ basée sur l'intensité carbone locale.</p>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Ressources</h3>
+                    <p>Utilisation intensive du GPU, CPU et de la RAM pendant l'inférence.</p>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Performance</h3>
+                    <p>Latence (Time to First Token), débit et précision des réponses.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2><i class="fas fa-cogs"></i>Fonctionnement Technique</h2>
+            <p>SOBRIA ne déploie pas de modèles lui-même. Il agit comme une sonde externe qui interroge vos serveurs
+                d'inférence existants (Ollama, vLLM, llama.cpp, etc.) tout en surveillant la consommation matérielle en
+                temps réel.</p>
+
+            <div class="use-case">
+                <h3>Points Clés de l'Architecture :</h3>
+                <ul>
+                    <li><strong>Isolation totale :</strong> Déployé via Docker, aucune donnée ne quitte votre
+                        infrastructure.</li>
+                    <li><strong>Configuration hiérarchique :</strong> CLI, YAML, Variables d'environnement pour une
+                        flexibilité maximale.</li>
+                    <li><strong>Comparaison Théorique :</strong> Compare les mesures réelles avec des modèles théoriques
+                        de consommation basés sur le nombre de paramètres.</li>
+                    <li><strong>Datasets intégrés :</strong> SQuAD, Sentiment Analysis, General Q&A pour des tests
+                        standardisés.</li>
+                </ul>
+            </div>
+
+            <h3>Exemple d'utilisation :</h3>
+            <div class="code-block">
+                # Lancer un audit sur Llama 3 avec 10 échantillons<br>
+                docker compose run sobria --model llama3 --task qa/simple_100 --max-samples 10
+            </div>
+        </section>
+
+        <section class="demo-section concept-section">
+            <h2><i class="fas fa-file-alt"></i>Livrables d'Audit</h2>
+            <p>À la fin de chaque session de benchmarking, SOBRIA génère automatiquement des rapports détaillés dans le
+                dossier <code>output/</code> :</p>
+            <ul>
+                <li><strong>CSV :</strong> Données brutes par requête pour analyse approfondie.</li>
+                <li><strong>JSON :</strong> Synthèse structurée pour intégration dans des dashboards.</li>
+                <li><strong>Markdown/PDF :</strong> Rapports lisibles par l'humain avec graphiques et recommandations.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2>Contactez-moi</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ivann.profree@gmail.com"
+                    title="Cliquez pour m'envoyer un email">ivann.profree@gmail.com</a>
+            </div>
+        </div>
+
+        <form action="https://formsubmit.co/ded1109623862ce937133dd7ffff0170" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <input type="hidden" name="_subject" value="Question à propos de SOBRIA">
+            <input type="hidden" name="_next" value="https://ivannp39.github.io/Portfolio/thanks.html">
+            <button type="submit" class="btn">Envoyer un message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026Portfolio Ivann PUSLECKI</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ivann-puslecki-3b33aa323/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail - TinyML Reconnaissance d'Activités</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/demo.css">
+</head>
+
+<body>
+    <div class="demo-container">
+        <a href="../index.html" class="back-link">← Retour au portfolio</a>
+
+        <h1>Reconnaissance d'activités humaines (TinyML)</h1>
+
+        <section class="demo-section hero-section">
+            <h2><i class="fas fa-microchip"></i>Vue d'ensemble</h2>
+            <p class="lead-text">
+                Développement d'un pipeline <strong>TinyML</strong> complet pour la reconnaissance d'activités humaines
+                (debout, assis, allongé...), optimisé pour tourner sur des microcontrôleurs aux ressources très limitées
+                (quelques kilo-octets de mémoire).
+                <br><br>
+                Ce projet confirme qu'avec une architecture adaptée, une quantification rigoureuse et un post-traitement
+                au niveau du firmware, il est possible d'obtenir des prédictions fiables en temps réel.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <h2><i class="fas fa-cogs"></i>Le Pipeline ML & Fonctionnement</h2>
+            <div class="step-container">
+                <div class="step">
+                    <h3><i class="fas fa-brain"></i> 1. Entraînement du Modèle</h3>
+                    <p>Le modèle repose sur un <strong>CNN 1D</strong> entraîné avec TensorFlow sur le dataset UCI HAR :
+                    </p>
+                    <ul>
+                        <li>Augmentation de données pour une meilleure généralisation</li>
+                        <li>Quantification post-entraînement en <strong>INT8</strong></li>
+                        <li>Résultat ultra-léger : seulement <strong>3 206 paramètres</strong></li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3><i class="fas fa-code"></i> 2. Firmware & Déploiement</h3>
+                    <p>Déploiement sur <strong>ESP32</strong> et <strong>Raspberry Pi Pico 2 W</strong>, respectant les
+                        contraintes strictes de RAM et de flash :</p>
+                    <ul>
+                        <li>Utilisation de <strong>TensorFlow Lite for Microcontrollers</strong></li>
+                        <li>Code source écrit en Arduino/C++</li>
+                        <li>Filtre de vote temporel implémenté directement dans le firmware pour réduire la confusion
+                            entre les classes "assis" et "debout" sans coût mémoire supplémentaire</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3><i class="fas fa-check-circle"></i> 3. Performances</h3>
+                    <ul>
+                        <li>Précision d'environ <strong>95%</strong> (ex: 0.938 sur les modèles INT8)</li>
+                        <li>Inférence en temps réel sur microcontrôleur</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section concept-section">
+            <h2><i class="fas fa-terminal"></i>Test & Exécution</h2>
+            <p>Aperçu de la sortie série lors de l'exécution sur un Raspberry Pi Pico 2 W :</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="../assets/Capture_output_TEST.png" alt="Test output Pico 2W"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2>Contactez-moi</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ivann.profree@gmail.com"
+                    title="Cliquez pour m'envoyer un email">ivann.profree@gmail.com</a>
+            </div>
+        </div>
+
+        <form action="https://formsubmit.co/ded1109623862ce937133dd7ffff0170" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+            <input type="hidden" name="_next" value="https://ivannp39.github.io/Portfolio/thanks.html">
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 Portfolio Ivann PUSLECKI</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ivann-puslecki-3b33aa323/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

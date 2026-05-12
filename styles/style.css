@@ -369,6 +369,24 @@ nav ul li a:hover {
     transform: translateX(5px);
 }
 
+.projet-card .card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 1rem;
+}
+
+.projet-card .site-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.projet-card .site-link:hover {
+    color: var(--primary-color);
+}
+
 /* Section Expériences */
 .experiences {
     padding: 5rem 10%;
