@@ -348,7 +348,17 @@ nav ul li a:hover {
 }
 
 .projet-card h3 {
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.projet-date {
+    display: block;
+    padding: 1rem 1rem 0;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .projet-card p {

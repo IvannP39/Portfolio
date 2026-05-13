@@ -189,16 +189,19 @@
     <section id="projets" class="projets">
         <h2>Mes Projets</h2>
         <div class="projet-grid">
+
             <div class="projet-card">
-                <img src="assets/robot_nyro.png" alt="Robot Lanceur de Dés">
-                <h3>Détecteur de dés pipés — Robot Lanceur de Dés Automatique</h3>
-                <p>Conception d'un système robotisé autonome pour lancer un dé des centaines de fois, analyser l'image
-                    du dé (<b>OpenCV</b>/<b>Python</b>) et déterminer statistiquement si le dé est pipé. Intègre bras
-                    robotisé (<b>Robot Niryo</b>), capture d'image, traitement et stockage des résultats.</p>
+                <img src="assets/top_30_winners.png" alt="Tennis Analytics">
+                <span class="projet-date">Septembre 2023</span>
+                <h3>Tennis Analytics — Statistiques des Matchs ATP (1964–2023)</h3>
+                <p>Analyse de données ATP sur 60 ans : nettoyage (<b>Pandas</b>), corrélations (service vs victoire),
+                    impact de la latéralité, et visualisations (<b>Matplotlib</b>/<b>Seaborn</b>) pour révéler tendances
+                    historiques.</p>
             </div>
 
             <div class="projet-card">
                 <img src="assets/zumo_image.png" alt="Zumo Line Follower">
+                <span class="projet-date">Janvier-Mai 2024</span>
                 <h3>Zumo Line Follower — Victoire en Course Robotique</h3>
                 <p>Développement en <b>C</b> d'un robot suiveur de ligne (<b>Zumo</b> avec carte <b>Arduino</b>)
                     optimisé pour la vitesse et la précision. Capteurs IR, PID ajustés pour virages serrés. Victoire en
@@ -207,6 +210,7 @@
 
             <div class="projet-card">
                 <img src="assets/Sobel_contour.png" alt="Traitement d'Image C++">
+                <span class="projet-date">Décembre 2024</span>
                 <h3>Traitement d'Image — Détection de Primitives et Analyse Visuelle</h3>
                 <p>Série de projets <b>C++</b> pour la détection de coins (<b>Harris</b>), filtrage (<b>Sobel</b>),
                     seuillage et analyse de contours. Approche algorithmiques et optimisation pour traitement efficace
@@ -214,15 +218,17 @@
             </div>
 
             <div class="projet-card">
-                <img src="assets/top_30_winners.png" alt="Tennis Analytics">
-                <h3>Tennis Analytics — Statistiques des Matchs ATP (1964–2023)</h3>
-                <p>Analyse de données ATP sur 60 ans : nettoyage (<b>Pandas</b>), corrélations (service vs victoire),
-                    impact de la latéralité, et visualisations (<b>Matplotlib</b>/<b>Seaborn</b>) pour révéler tendances
-                    historiques.</p>
+                <img src="assets/robot_nyro.png" alt="Robot Lanceur de Dés">
+                <span class="projet-date">Janvier-Mars 2025</span>
+                <h3>Détecteur de dés pipés — Robot Lanceur de Dés Automatique</h3>
+                <p>Conception d'un système robotisé autonome pour lancer un dé des centaines de fois, analyser l'image
+                    du dé (<b>OpenCV</b>/<b>Python</b>) et déterminer statistiquement si le dé est pipé. Intègre bras
+                    robotisé (<b>Robot Niryo</b>), capture d'image, traitement et stockage des résultats.</p>
             </div>
 
             <div class="projet-card">
                 <img src="assets/n8n_capture_factures.png" alt="Automatisation Factures">
+                <span class="projet-date">Décembre 2025</span>
                 <h3>Automatisation Comptable — Génération de Factures (N8N & Python)</h3>
                 <p>Solutions : <b>N8N</b> (low-code) et <b>Python</b> (gspread, reportlab) pour générer des factures
                     depuis Google Sheets : extraction, génération PDF, numérotation, TVA et envoi automatique par email.
@@ -232,6 +238,7 @@
 
             <div class="projet-card">
                 <img src="assets/app_factures_gen.png" alt="Logiciel d'automatisation de factures">
+                <span class="projet-date">Janvier 2026</span>
                 <h3>Logiciel d'automatisation de factures créé de bout en bout (Python)</h3>
                 <p>Solutions : <b>Python</b> pour : récupérer un ou plusieurs fichiers <b>.csv</b>, nettoyer les données
                     et générer les factures.
@@ -243,6 +250,7 @@
 
             <div class="projet-card">
                 <img src="assets/SOBRIA.png" alt="SOBRIA - LLM Benchmarking">
+                <span class="projet-date">Février-Avril 2026</span>
                 <h3>SOBRIA — Green AI Benchmarking</h3>
                 <p>Outil d'audit (<b>Python</b> / <b>Docker</b>) pour mesurer la performance, la consommation
                     énergétique (kWh) et l'empreinte carbone (CO₂) des LLM. Analyse comparative entre mesures réelles et
@@ -255,19 +263,23 @@
 
             <div class="projet-card">
                 <img src="assets/Graphical_Abstract.png" alt="Article : Empreinte environnementale de l'IA">
+                <span class="projet-date">Février-Avril 2026</span>
                 <h3>Article — L'empreinte en Eau & Énergie des LLM</h3>
                 <p>Analyse scientifique rigoureuse de l'empreinte environnementale de l'inférence IA. Déconstruction des
                     mythes via une méthodologie "Bottom-up" pour établir des ordres de grandeur réels (Wh et mL par
                     requête).</p>
                 <div class="card-links">
+                    <a href="https://zenodo.org/records/19240825" target="_blank" class="site-link"><i
+                            class="fas fa-file-pdf"></i> Article</a>
                     <a href="https://www.brandkitlink.com/conso-ia" target="_blank" class="site-link"><i
                             class="fas fa-calculator"></i> Simulateur</a>
-                    <a href="pages/article_ai_footprint.html" class="demo-link">Lire le résumé →</a>
+                    <a href="pages/article_ai_footprint.html" class="demo-link">Résumé →</a>
                 </div>
             </div>
 
             <div class="projet-card">
                 <img src="assets/Capture_output_TEST.png" alt="TinyML : Reconnaissance d'activités sur Microcontrôleur">
+                <span class="projet-date">Mai 2026</span>
                 <h3>TinyML : Reconnaissance d'activités sur Microcontrôleur</h3>
                 <p>Développement d'un pipeline complet : CNN 1D (<b>TensorFlow</b>), quantification <b>INT8</b>, et
                     déploiement C++ sur <b>ESP32 / Pico 2 W</b>. Inférence temps réel avec seulement 3 206 paramètres et
@@ -277,6 +289,7 @@
 
             <div class="projet-card">
                 <img src="assets/logo_viok.png" alt="Viok app">
+                <span class="projet-date">Avril 2026 - Présent</span>
                 <h3>VIOK — Connecter les Générations</h3>
                 <p>Développement d'une <b>application</b> mobile complète (<b>React Native</b>) visant à rompre
                     l'isolement des seniors. Interface ultra-simplifiée pour tablette (Sénior) synchronisée avec une
